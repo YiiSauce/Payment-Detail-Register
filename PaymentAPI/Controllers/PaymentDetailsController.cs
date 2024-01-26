@@ -69,7 +69,7 @@ namespace PaymentAPI.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(await _context.PaymentDetails.ToListAsync());
         }
 
         // POST: api/PaymentDetails
