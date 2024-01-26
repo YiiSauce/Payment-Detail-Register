@@ -11,6 +11,8 @@ export class PaymentDetailService {
   constructor(private http:HttpClient) { }
   url:string = environment.apiBaseUrl+"/PaymentDetails";
   list:PaymentDetail[] = [];
+  formData :PaymentDetail = new PaymentDetail();
+
   refrechList(){
     this.http.get(this.url).subscribe({
       next:res=>{
@@ -21,5 +23,8 @@ export class PaymentDetailService {
         console.log(err);
       }
     })
+  }
+  saveDetail(){
+    return this.http.post(this.url, this.formData);
   }
 }
