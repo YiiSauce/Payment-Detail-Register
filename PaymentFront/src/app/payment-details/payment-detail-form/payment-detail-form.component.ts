@@ -16,6 +16,7 @@ export class PaymentDetailFormComponent {
     this.service.saveDetail().subscribe({
       next:res=>{
         this.service.list = res as PaymentDetail[];
+        this.service.resetForm(form)
       },
       error:err=>{console.log(err)}
     })
