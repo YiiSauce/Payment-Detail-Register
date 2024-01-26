@@ -6,7 +6,7 @@ import { PaymentDetailService } from '../shared/payment-detail.service';
   templateUrl: './payment-details.component.html',
 })
 export class PaymentDetailsComponent implements OnInit{
-  constructor(private service:PaymentDetailService) {
+  constructor(public service:PaymentDetailService) {
   }
   ngOnInit(): void {
     this.service.refrechList();
