@@ -3,6 +3,15 @@
 .mouse-hover{
     cursor: pointer;
 }
+#del:hover {
+    /* background-color: #008CBA; */
+    color: rgba(218, 0, 0, 0.963); /* change to your desired color */
+}
+#update:hover {
+    /* background-color: #008CBA; */
+    color: rgba(0, 84, 218, 0.963); /* change to your desired color */
+}
+
 form label {
     text-transform: uppercase;
     color: grey;
